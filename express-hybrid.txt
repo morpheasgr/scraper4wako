@@ -11,25 +11,25 @@
     "time_to_wait_on_too_many_request_ms": 2000,
     "response_type": "json",
     "token": {
-      "query": "/pubapi_v2.php?get_token=get_token&app_id=syncler",
+      "query": "/pubapi_v2.php?get_token=get_token&app_id=helios",
       "token_validity_time_ms": 840000,
       "token_format": {
         "token": "token"
       }
     },
     "movie": {
-      "query": "/pubapi_v2.php?mode=search&search_imdb={query}&category=movies&format=json_extended&app_id=syncler&token={token}",
+      "query": "/pubapi_v2.php?mode=search&search_imdb={query}&category=movies&format=json_extended&app_id=helios&token={token}",
       "keywords": "{imdbId}"
     },
     "episode": {
-      "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=syncler&token={token}",
+      "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=helios&token={token}",
       "keywords": [
         "{title} {episodeCode}",
         "{title} {year} {episodeCode}"
       ]
     },
     "season": {
-      "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=syncler&token={token}",
+      "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=helios&token={token}",
       "keywords": [
         "{title} {seasonCode}",
         "{title} season",
@@ -54,7 +54,7 @@
       "*": ""
     },
     "trust_results": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "bitlord": {
     "name": "Bitlord",
@@ -108,7 +108,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "extratorrents": {
     "name": "ExtraTorrent",
@@ -167,7 +167,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "yts": {
     "name": "YTS",
@@ -205,7 +205,7 @@
       "*": ""
     },
     "trust_results": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "zooqle": {
     "name": "Zooqle",
@@ -269,7 +269,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "thepiratebay": {
     "name": "PirateBay",
@@ -322,7 +322,7 @@
       "\"": "",
       "*": ""
     },
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "torrentdownload": {
     "name": "TorrentDownload",
@@ -377,7 +377,7 @@
       "*": ""
     },
     "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "anirena": {
     "name": "AniRena",
@@ -430,7 +430,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "torrentdownloads": {
     "name": "TorrentDownloads",
@@ -489,7 +489,7 @@
       "*": ""
     },
     "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "kickass": {
     "name": "Kickass",
@@ -553,7 +553,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "torrentgalaxy": {
     "name": "TorrentGalaxy",
@@ -613,7 +613,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "eztv": {
     "name": "EZTV",
@@ -662,7 +662,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "skytorrents": {
     "name": "SkyTorrents",
@@ -718,7 +718,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "glodls": {
     "name": "Glodls",
@@ -770,7 +770,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "magnetdl": {
     "name": "MagnetDL",
@@ -822,7 +822,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "rutor": {
     "name": "RuTor",
@@ -853,7 +853,7 @@
       "url": "row.querySelector('td:nth-child(2) a:nth-child(2)').getAttribute('href')"
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "solidtorrents": {
     "name": "SolidTorrents",
@@ -908,7 +908,7 @@
       "\"": "",
       "*": ""
     },
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "nyaa": {
     "name": "Nyaa",
@@ -959,7 +959,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "nyaa2": {
     "name": "Nyaa2",
@@ -1010,7 +1010,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "limetorrents": {
     "name": "LimeTorrents",
@@ -1074,7 +1074,7 @@
       "*": ""
     },
     "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "torrent9": {
     "name": "Torrent9",
@@ -1125,7 +1125,7 @@
       "*": ""
     },
     "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "ilcorsaronero": {
     "name": "IlCorsaroNero",
@@ -1183,7 +1183,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "1337x": {
     "name": "1337X",
@@ -1245,7 +1245,7 @@
       "*": ""
     },
     "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "oxtorrent": {
     "name": "OxTorrent",
@@ -1301,7 +1301,7 @@
       "*": ""
     },
     "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "pirateiro": {
     "name": "Pirateiro",
@@ -1350,7 +1350,7 @@
       "url": "row.querySelector('a.imagnet.icon16').getAttribute('href')"
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "7torr": {
     "name": "SevenTorrents",
@@ -1408,7 +1408,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "animetosho": {
     "name": "AnimeTosho",
@@ -1462,7 +1462,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "torlock": {
     "name": "TorLock",
@@ -1522,7 +1522,7 @@
       "*": ""
     },
     "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "anidex": {
     "name": "AniDex",
@@ -1576,7 +1576,7 @@
       "*": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "original_package": "heliosScrapers - OpenScrapers"
   },
   "btdb": {
     "name": "BTDB",
@@ -1622,7 +1622,7 @@
       "&": ""
     },
     "source_is_in_sub_page": false,
-    "original_package": "Syncler.ml - Providers"
+    "original_package": "helios.ml - Providers"
   },
   "yourbittorrent": {
     "name": "YourBittorent",
@@ -1665,7 +1665,7 @@
       ".": "",
       ":": ""
     },
-    "original_package": "Syncler.ml - Providers"
+    "original_package": "helios.ml - Providers"
   },
   "btscene": {
     "name": "Btscene",
