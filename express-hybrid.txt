@@ -1842,7 +1842,7 @@
   },
   "movcr": {
     "name": "MovCr",
-    "enabled": false,
+    enabled": true,
     "languages": [
       "in",
       "en"
@@ -1887,7 +1887,7 @@
   },
   "yohoho": {
     "name": "YOHOHO",
-    "enabled": false,
+    enabled": true,
     "languages": [
       "ru"
     ],
@@ -1913,7 +1913,7 @@
   },
   "digbt": {
     "name": "DIGBT",
-    "enabled": false,
+    enabled": true,
     "languages": [
       "en"
     ],
@@ -1956,7 +1956,7 @@
   },
   "corsarored": {
     "name": "Corsaro.Red",
-    "enabled": false,
+    enabled": true,
     "languages": [
       "it"
     ],
