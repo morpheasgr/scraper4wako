@@ -12,25 +12,25 @@
         "time_to_wait_on_too_many_request_ms": 2000,
         "trust_results": true,
         "token": {
-            "query": "/pubapi_v2.php?get_token=get_token&app_id=syncler",
+            "query": "/pubapi_v2.php?get_token=get_token&app_id=helios",
             "token_validity_time_ms": 840000,
             "token_format": {
                 "token": "token"
             }
         },
         "movie": {
-            "query": "/pubapi_v2.php?mode=search&search_imdb={query}&category=movies&format=json_extended&app_id=syncler&token={token}",
+            "query": "/pubapi_v2.php?mode=search&search_imdb={query}&category=movies&format=json_extended&app_id=helios&token={token}",
             "keywords": "{imdbId}"
         },
         "episode": {
-            "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=syncler&token={token}",
+            "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=helios&token={token}",
             "keywords": [
                 "{title} {episodeCode}",
                 "{title} {year} {episodeCode}"
             ]
         },
         "season": {
-            "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=syncler&token={token}",
+            "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=helios&token={token}",
             "keywords": [
                 "{title} {seasonCode}",
                 "{title} season",
