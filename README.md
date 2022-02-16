@@ -7,7 +7,7 @@ You are solely responsible for the content you watch online, these scrapers do n
 ## How to use
 Click on any of the txt files in this repo (only ONE), then right click on "Raw" and copy the URL. You will get a raw.githubusercontent.com URL, that is the provider URL you need to enter in Helios.
 
-If you don't understand how to do this here's the URLs;
+If you don't understand how to do this here's the direct URLs, just copy one of them to the clipboard and paste/add it in Helios's provider settings.
 
 JakedUp (express-hybrid.txt):
 https://raw.githubusercontent.com/morpheasgr/scraper4wako/main/express-hybrid.txt
