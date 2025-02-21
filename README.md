@@ -9,6 +9,9 @@ Click on any of the txt files in this repo (only ONE), then right click on "Raw"
 
 If you don't understand how to do this here's the direct URLs, just copy one of them to the clipboard and paste/add it in Helios's provider settings.
 
+Magnify Scrapers:
+https://raw.githubusercontent.com/morpheasgr/scraper4wako/main/magnify.txt
+
 JakedUp (express-hybrid.txt):
 https://raw.githubusercontent.com/morpheasgr/scraper4wako/main/express-hybrid.txt
 
