@@ -1,6 +1,7 @@
 {
   "dmm": {
     "name": "DMM",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/dmm",
     "response_type": "json",
     "movie": {
@@ -28,6 +29,7 @@
   },
   "mediafusion": {
     "name": "MediaFusion",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/mediafusion",
     "response_type": "json",
     "movie": {
@@ -55,6 +57,7 @@
   },
   "knightcrawler": {
     "name": "KnightCrawler",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/knightcrawler",
     "response_type": "json",
     "movie": {
@@ -82,6 +85,7 @@
   },
   "torrentio": {
     "name": "Torrentio",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/torrentio",
     "response_type": "json",
     "movie": {
@@ -109,6 +113,7 @@
   },
   "torrents-csv": {
     "name": "TorrentsCSV",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/torrents-csv",
     "response_type": "json",
     "separator": "+",
@@ -150,6 +155,7 @@
   },
   "piratebay_primary": {
     "name": "PirateBay",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/piratebay",
     "response_type": "json",
     "separator": "+",
@@ -190,6 +196,7 @@
   },
   "torlock_primary": {
     "name": "Torlock",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/torlock",
     "response_type": "text",
     "separator": "-",
@@ -232,6 +239,7 @@
   },
   "cloudtorrents_primary": {
     "name": "CloudTorrrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/cloudtorrents",
     "response_type": "text",
     "separator": "+",
@@ -273,6 +281,7 @@
   },
   "solidtorrents_primary": {
     "name": "SolidTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/solidtorrents",
     "response_type": "text",
     "separator": "+",
@@ -314,6 +323,7 @@
   },
   "kickass_primary": {
     "name": "KickassTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/kickass",
     "response_type": "text",
     "separator": "+",
@@ -355,6 +365,7 @@
   },
   "glotorrents_primary": {
     "name": "GloTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/glotorrents",
     "response_type": "text",
     "separator": "+",
@@ -396,6 +407,7 @@
   },
   "torrentquest_primary": {
     "name": "TorrentQuest",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/torrentquest",
     "response_type": "text",
     "separator": "-",
@@ -437,6 +449,7 @@
   },
   "1337x_primary": {
     "name": "1337x",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/1337x",
     "response_type": "text",
     "separator": "+",
@@ -479,6 +492,7 @@
   },
   "nyaa_primary": {
     "name": "Nyaa",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/nyaa",
     "response_type": "text",
     "separator": "+",
@@ -520,6 +534,7 @@
   },
   "piratebay_secondary": {
     "name": "PirateBay",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/piratebay",
     "response_type": "json",
     "separator": "+",
@@ -560,6 +575,7 @@
   },
   "torlock_secondary": {
     "name": "Torlock",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/torlock",
     "response_type": "text",
     "separator": "-",
@@ -602,6 +618,7 @@
   },
   "cloudtorrents_secondary": {
     "name": "CloudTorrrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/cloudtorrents",
     "response_type": "text",
     "separator": "+",
@@ -643,6 +660,7 @@
   },
   "solidtorrents_secondary": {
     "name": "SolidTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/solidtorrents",
     "response_type": "text",
     "separator": "+",
@@ -684,6 +702,7 @@
   },
   "kickass_secondary": {
     "name": "KickassTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/kickass",
     "response_type": "text",
     "separator": "+",
@@ -725,6 +744,7 @@
   },
   "glotorrents_secondary": {
     "name": "GloTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/glotorrents",
     "response_type": "text",
     "separator": "+",
@@ -766,6 +786,7 @@
   },
   "torrentquest_secondary": {
     "name": "TorrentQuest",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/torrentquest",
     "response_type": "text",
     "separator": "-",
@@ -807,6 +828,7 @@
   },
   "1337x_secondary": {
     "name": "1337x",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/1337x",
     "response_type": "text",
     "separator": "+",
@@ -849,6 +871,7 @@
   },
   "nyaa_secondary": {
     "name": "Nyaa",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/nyaa",
     "response_type": "text",
     "separator": "+",
@@ -890,6 +913,7 @@
   },
   "piratebay_tertiary": {
     "name": "PirateBay",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/piratebay",
     "response_type": "json",
     "separator": "+",
@@ -930,6 +954,7 @@
   },
   "torlock_tertiary": {
     "name": "Torlock",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/torlock",
     "response_type": "text",
     "separator": "-",
@@ -972,6 +997,7 @@
   },
   "cloudtorrents_tertiary": {
     "name": "CloudTorrrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/cloudtorrents",
     "response_type": "text",
     "separator": "+",
@@ -1013,6 +1039,7 @@
   },
   "solidtorrents_tertiary": {
     "name": "SolidTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/solidtorrents",
     "response_type": "text",
     "separator": "+",
@@ -1054,6 +1081,7 @@
   },
   "kickass_tertiary": {
     "name": "KickassTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/kickass",
     "response_type": "text",
     "separator": "+",
@@ -1095,6 +1123,7 @@
   },
   "glotorrents_tertiary": {
     "name": "GloTorrents",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/glotorrents",
     "response_type": "text",
     "separator": "+",
@@ -1136,6 +1165,7 @@
   },
   "torrentquest_tertiary": {
     "name": "TorrentQuest",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/torrentquest",
     "response_type": "text",
     "separator": "-",
@@ -1177,6 +1207,7 @@
   },
   "1337x_tertiary": {
     "name": "1337x",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/1337x",
     "response_type": "text",
     "separator": "+",
@@ -1219,6 +1250,7 @@
   },
   "nyaa_tertiary": {
     "name": "Nyaa",
+    "enabled": true,
     "base_url": "https://magnify.pages.dev/scrapers/nyaa",
     "response_type": "text",
     "separator": "+",
