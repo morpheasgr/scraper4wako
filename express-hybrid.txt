@@ -1,60 +1,71 @@
 {
-  "torrentapi": {
-    "name": "RARBG",
+  "torrentio": {
+    "name": "Torrentio",
     "enabled": true,
     "languages": [
       "en"
     ],
-    "base_url": "https://torrentapi.org",
-    "fallback_urls": [],
-    "time_to_wait_between_each_request_ms": 300,
-    "time_to_wait_on_too_many_request_ms": 2000,
+    "base_url": "https://torrentio.strem.fun",
     "response_type": "json",
-    "token": {
-      "query": "/pubapi_v2.php?get_token=get_token&app_id=helios",
-      "token_validity_time_ms": 840000,
-      "token_format": {
-        "token": "token"
-      }
-    },
     "movie": {
-      "query": "/pubapi_v2.php?mode=search&search_imdb={query}&category=movies&format=json_extended&app_id=helios&token={token}",
+      "query": "/stream/movie/{query}.json",
       "keywords": "{imdbId}"
     },
     "episode": {
-      "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=helios&token={token}",
-      "keywords": [
-        "{title} {episodeCode}",
-        "{title} {year} {episodeCode}"
-      ]
-    },
-    "season": {
-      "query": "/pubapi_v2.php?mode=search&search_string={query}&category=tv&format=json_extended&app_id=helios&token={token}",
-      "keywords": [
-        "{title} {seasonCode}",
-        "{title} season",
-        "{title} {year} {seasonCode}",
-        "{title} {year} season"
-      ]
+      "query": "/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
     },
     "json_format": {
-      "results": "torrent_results",
-      "url": "download",
+      "results": "streams",
       "title": "title",
-      "seeds": "seeders",
-      "peers": "leechers",
-      "size": "size"
+      "hash": "infoHash"
+    }
+  },
+  "superflix": {
+    "name": "Superflix",
+    "enabled": true,
+    "languages": [
+      "en"
+    ],
+    "base_url": "https://23dfbfad8cb2-stremio-addon-superflix.baby-beamup.club",
+    "response_type": "json",
+    "movie": {
+      "query": "/stream/movie/{query}.json",
+      "keywords": "{imdbId}"
     },
-    "title_replacement": {
-      ".": "",
-      ":": "",
-      "'": "",
-      "&": "",
-      "\"": "",
-      "*": ""
+    "episode": {
+      "query": "/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
     },
-    "trust_results": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "json_format": {
+      "results": "streams",
+      "title": "description",
+      "quality": "name",
+      "url": "url"
+    }
+  },
+  "shluflix": {
+    "name": "Shluflix",
+    "enabled": true,
+    "languages": [
+      "en"
+    ],
+    "base_url": "https://ea627ddf0ee7-shluflix.baby-beamup.club",
+    "response_type": "json",
+    "movie": {
+      "query": "/stream/movie/{query}.json",
+      "keywords": "{imdbId}"
+    },
+    "episode": {
+      "query": "/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
+    },
+    "json_format": {
+      "results": "streams",
+      "title": "description",
+      "quality": "description",
+      "url": "url"
+    }
   },
   "bitlord": {
     "name": "Bitlord",
@@ -107,8 +118,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "extratorrents": {
     "name": "ExtraTorrent",
@@ -166,8 +176,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "yts": {
     "name": "YTS",
@@ -204,8 +213,7 @@
       "\"": "",
       "*": ""
     },
-    "trust_results": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "trust_results": true
   },
   "zooqle": {
     "name": "Zooqle",
@@ -268,8 +276,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "thepiratebay": {
     "name": "PirateBay",
@@ -321,8 +328,7 @@
       "&": "",
       "\"": "",
       "*": ""
-    },
-    "original_package": "SynclerScrapers - OpenScrapers"
+    }
   },
   "torrentdownload": {
     "name": "TorrentDownload",
@@ -376,8 +382,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": true
   },
   "anirena": {
     "name": "AniRena",
@@ -429,8 +434,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "torrentdownloads": {
     "name": "TorrentDownloads",
@@ -488,8 +492,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": true
   },
   "kickass": {
     "name": "Kickass",
@@ -552,8 +555,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "torrentgalaxy": {
     "name": "TorrentGalaxy",
@@ -612,8 +614,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "eztv": {
     "name": "EZTV",
@@ -661,8 +662,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "skytorrents": {
     "name": "SkyTorrents",
@@ -717,8 +717,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "glodls": {
     "name": "Glodls",
@@ -769,8 +768,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "magnetdl": {
     "name": "MagnetDL",
@@ -821,8 +819,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "rutor": {
     "name": "RuTor",
@@ -840,7 +837,8 @@
       "query": "/search/{query}",
       "keywords": [
         "{title} {episodeCode}",
-        "{title} {year} {episodeCode}"
+        "{title} {year} {episodeCode}",
+        "{title} {season}"
       ]
     },
     "html_parser": {
@@ -851,8 +849,7 @@
       "size": "row.querySelector('td:nth-last-child(2)').innerText",
       "url": "row.querySelector('td:nth-child(2) a:nth-child(2)').getAttribute('href')"
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "nyaa": {
     "name": "Nyaa",
@@ -902,8 +899,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "nyaa2": {
     "name": "Nyaa2",
@@ -953,8 +949,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "limetorrents": {
     "name": "LimeTorrents",
@@ -1017,8 +1012,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": true
   },
   "torrent9": {
     "name": "Torrent9",
@@ -1068,8 +1062,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": true
   },
   "ilcorsaronero": {
     "name": "IlCorsaroNero",
@@ -1126,8 +1119,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "1337x": {
     "name": "1337X",
@@ -1188,8 +1180,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": true
   },
   "bitsearch": {
     "name": "BitSearch",
@@ -1243,8 +1234,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "oxtorrent": {
     "name": "OxTorrent",
@@ -1299,8 +1289,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": true
   },
   "pirateiro": {
     "name": "Pirateiro",
@@ -1348,8 +1337,7 @@
       "size": "row.querySelector('td > font').textContent",
       "url": "row.querySelector('a.imagnet.icon16').getAttribute('href')"
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "7torr": {
     "name": "SevenTorrents",
@@ -1406,8 +1394,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "animetosho": {
     "name": "AnimeTosho",
@@ -1460,8 +1447,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
   },
   "torlock": {
     "name": "TorLock",
@@ -1483,9 +1469,7 @@
       "query": "/television/torrents/{query}.html?",
       "keywords": [
         "{title} {episodeCode}",
-        "{title} {year} {episodeCode}",
-        "{title} {absoluteNumber}",
-        "{title} {episode}"
+        "{title} {year} {episodeCode}"
       ]
     },
     "season": {
@@ -1520,8 +1504,7 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": true,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": true
   },
   "anidex": {
     "name": "AniDex",
@@ -1574,11 +1557,55 @@
       "\"": "",
       "*": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "SynclerScrapers - OpenScrapers"
+    "source_is_in_sub_page": false
+  },
+  "solidtorrents": {
+    "name": "Solidtorrents",
+    "enabled": true,
+    "languages": [
+      "en"
+    ],
+    "base_url": "https://solidtorrents.net/api/v1/search?q={query}&category=video&sort=seeders",
+    "response_type": "json",
+    "movie": {
+      "query": "",
+      "keywords": "{title} {year}"
+    },
+    "episode": {
+      "query": "",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "",
+      "keywords": [
+        "{title} {absoluteNumber}",
+        "{title} {episode}"
+      ]
+    },
+    "json_format": {
+      "results": "results",
+      "url": "magnet",
+      "title": "title",
+      "seeds": "swarm.seeders",
+      "peers": "swarm.leechers",
+      "size": "size"
+    },
+    "title_replacement": {
+      ".": "",
+      ":": "",
+      "'": "",
+      "&": ""
+    }
   },
   "btdb": {
-    "name": "BTDB",
+    "name": "Btdb",
     "enabled": true,
     "languages": [
       "en"
@@ -1620,54 +1647,7 @@
       "'": "",
       "&": ""
     },
-    "source_is_in_sub_page": false,
-    "original_package": "Syncler.ml - Providers"
-  },
-  "solidtorrents": {
-    "name": "SolidTorrents",
-    "enabled": true,
-    "languages": [
-      "en"
-    ],
-    "base_url": "https://solidtorrents.net/api/v1/search?q={query}&category=video&sort=seeders",
-    "fallback_urls": [],
-    "response_type": "json",
-    "separator": "%20",
-    "movie": {
-      "query": "",
-      "keywords": "{title} {year}"
-    },
-    "episode": {
-      "query": "",
-      "keywords": "{title} {episodeCode}"
-    },
-    "season": {
-      "query": "",
-      "keywords": [
-        "{title} {seasonCode}",
-        "{title} season"
-      ]
-    },
-    "anime": {
-      "query": "",
-      "keywords": "{title} {absoluteNumber}"
-    },
-    "json_format": {
-      "results": "results",
-      "url": "magnet",
-      "title": "title",
-      "seeds": "swarm.seeders",
-      "peers": "swarm.leechers",
-      "size": "size",
-      "hash": "info_hash"
-    },
-    "title_replacement": {
-      ".": "",
-      ":": "",
-      "'": "",
-      "&": ""
-    },
-    "original_package": "Syncler.ml - Providers"
+    "source_is_in_sub_page": false
   },
   "yourbittorrent": {
     "name": "YourBittorent",
@@ -1697,11 +1677,11 @@
       "query": "/?v=&c=&q={query}"
     },
     "html_parser": {
-      "row": "doc.querySelectorAll('tr.table-default')",
-      "title": "row.querySelector('td:nth-child(2)').textContent",
       "peers": "row.querySelector('td:nth-child(6)').textContent",
+      "row": "doc.querySelectorAll('tr.table-default')",
       "seeds": "row.querySelector('td:nth-child(7)').textContent",
       "size": "row.querySelector('td:nth-child(4)').textContent",
+      "title": "row.querySelector('td:nth-child(2)').textContent",
       "url": "row.querySelector('td:nth-child(3) a:nth-child(3)').getAttribute('href')"
     },
     "title_replacement": {
@@ -1709,56 +1689,6 @@
       "'": "",
       ".": "",
       ":": ""
-    },
-    "original_package": "Syncler.ml - Providers"
-  },
-  "corsarored": {
-    "name": "Corsaro.Red",
-    "enabled": false,
-    "languages": [
-      "it"
-    ],
-    "base_url": "https://corsaro.red/api/search",
-    "method": "POST",
-    "http_method": "POST",
-    "response_type": "json",
-    "movie": {
-      "query": "{\"term\":\"{query}\",\"category\":\"2\"}",
-      "keywords": [
-        "{title.it} {year}",
-        "{title.original} {year}"
-      ]
-    },
-    "episode": {
-      "query": "{\"term\":\"{query}\",\"category\":\"1\"}",
-      "keywords": [
-        "{title.it} {episodeCode}",
-        "{title.original} {episodeCode}"
-      ]
-    },
-    "season": {
-      "query": "{\"term\":\"{query}\",\"category\":\"1\"}",
-      "keywords": [
-        "{title.it} {seasonCode}",
-        "{title.original} {seasonCode}"
-      ]
-    },
-    "anime": {
-      "query": "{\"term\":\"{query}\",\"category\":\"7\"}",
-      "keywords": [
-        "{title.it} {episodeCode}",
-        "{title.original} {episodeCode}"
-      ]
-    },
-    "json_format": {
-      "results": "results",
-      "url": "magnet",
-      "title": "title",
-      "seeds": "seeders",
-      "peers": "leechers",
-      "size": "size",
-      "quality": "description"
-    },
-    "original_package": "Aki07 - Unified"
+    }
   }
 }
