@@ -1,0 +1,1261 @@
+{
+  "dmm": {
+    "name": "DMM",
+    "base_url": "https://magnify.pages.dev/scrapers/dmm",
+    "response_type": "json",
+    "movie": {
+      "query": "/filtered?ImdbId={query}",
+      "keywords": "{imdbId}"
+    },
+    "episode": {
+      "query": "/filtered?ImdbId={query}&Season={season}&Episode={episode}",
+      "keywords": "{showImdbId}"
+    },
+    "anime": {
+      "query": "/filtered?ImdbId={query}&Season={season}&Episode={episode}",
+      "keywords": "{showImdbId}"
+    },
+    "json_format": {
+      "title": "raw_title",
+      "size": "size",
+      "hash": "info_hash"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 0,
+    "host_status": "public server"
+  },
+  "mediafusion": {
+    "name": "MediaFusion",
+    "base_url": "https://magnify.pages.dev/scrapers/mediafusion",
+    "response_type": "json",
+    "movie": {
+      "query": "/stream/movie/{query}.json",
+      "keywords": "{imdbId}"
+    },
+    "episode": {
+      "query": "/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
+    },
+    "anime": {
+      "query": "/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
+    },
+    "json_format": {
+      "results": "streams",
+      "title": "description",
+      "hash": "infoHash"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 0,
+    "host_status": "public server"
+  },
+  "knightcrawler": {
+    "name": "KnightCrawler",
+    "base_url": "https://magnify.pages.dev/scrapers/knightcrawler",
+    "response_type": "json",
+    "movie": {
+      "query": "/qualityfilter=scr,cam|sort=qualitysize/stream/movie/{query}.json",
+      "keywords": "{imdbId}"
+    },
+    "episode": {
+      "query": "/sort=qualitysize/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
+    },
+    "anime": {
+      "query": "/sort=qualitysize/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
+    },
+    "json_format": {
+      "results": "streams",
+      "title": "title",
+      "hash": "infoHash"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 0,
+    "host_status": "public server"
+  },
+  "torrentio": {
+    "name": "Torrentio",
+    "base_url": "https://magnify.pages.dev/scrapers/torrentio",
+    "response_type": "json",
+    "movie": {
+      "query": "/providers=yts,rarbg,1337x,thepiratebay,kickasstorrents,torrentgalaxy,magnetdl|qualityfilter=scr,cam|sort=qualitysize/stream/movie/{query}.json",
+      "keywords": "{imdbId}"
+    },
+    "episode": {
+      "query": "/providers=eztv,rarbg,1337x,thepiratebay,kickasstorrents,torrentgalaxy,magnetdl|sort=qualitysize/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
+    },
+    "anime": {
+      "query": "/providers=eztv,horriblesubs,nyaasi,tokyotosho,anidex|sort=qualitysize/stream/series/{query}:{season}:{episode}.json",
+      "keywords": "{showImdbId}"
+    },
+    "json_format": {
+      "results": "streams",
+      "title": "title",
+      "hash": "infoHash"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "torrents-csv": {
+    "name": "TorrentsCSV",
+    "base_url": "https://magnify.pages.dev/scrapers/torrents-csv",
+    "response_type": "json",
+    "separator": "+",
+    "movie": {
+      "query": "/search?q={query}&size=100",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search?q={query}&size=100",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search?q={query}&size=100",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search?q={query}&size=100",
+      "keywords": "{title} {episode}"
+    },
+    "json_format": {
+      "results": "torrents",
+      "title": "name",
+      "size": "size_bytes",
+      "seeds": "seeders",
+      "peers": "leechers",
+      "hash": "infohash"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 100,
+    "host_status": "public server"
+  },
+  "piratebay_primary": {
+    "name": "PirateBay",
+    "base_url": "https://magnify.pages.dev/scrapers/piratebay",
+    "response_type": "json",
+    "separator": "+",
+    "movie": {
+      "query": "/q.php?q={query}&cat=211",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/q.php?q={query}&cat=212",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/q.php?q={query}&cat=212",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/q.php?q={query}&cat=212",
+      "keywords": "{title} {episode}"
+    },
+    "json_format": {
+      "title": "name",
+      "size": "size",
+      "seeds": "seeders",
+      "peers": "leechers",
+      "hash": "info_hash"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 100,
+    "host_status": "public server"
+  },
+  "torlock_primary": {
+    "name": "Torlock",
+    "base_url": "https://magnify.pages.dev/scrapers/torlock",
+    "response_type": "text",
+    "separator": "-",
+    "movie": {
+      "query": "/movie/torrents/{query}/?sort=size&page=1",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/television/torrents/{query}/?sort=size&page=1",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/television/torrents/{query}/?sort=size&page=1",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/anime/torrents/{query}/?sort=size&page=1",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody tr')",
+      "title": "row.querySelector('td:nth-child(1) a b').textContent",
+      "size": "row.querySelector('.ts').textContent",
+      "seeds": "row.querySelector('.tul').textContent",
+      "peers": "row.querySelector('.tdl').textContent",
+      "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
+    },
+    "source_is_in_sub_page": true,
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 100,
+    "host_status": "public server"
+  },
+  "cloudtorrents_primary": {
+    "name": "CloudTorrrents",
+    "base_url": "https://magnify.pages.dev/scrapers/cloudtorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search?query={query}&torrent_type=5&ordering=-size&offset=0",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search?query={query}&torrent_type=8&ordering=-size&offset=0",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search?query={query}&torrent_type=8&ordering=-size&offset=0",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search?query={query}&torrent_type=1&ordering=-size&offset=0",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody tr')",
+      "title": "row.querySelector('.torrent-name').textContent.trim()",
+      "size": "row.querySelector('td:nth-child(2)').textContent.trim()",
+      "seeds": "row.querySelector('td:nth-child(4)').textContent.trim()",
+      "peers": "row.querySelector('td:nth-child(5)').textContent.trim()",
+      "url": "row.querySelector('a[href^=\"magnet:\"]').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "solidtorrents_primary": {
+    "name": "SolidTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/solidtorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search?q={query}&sort=size&page=1",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search?q={query}&sort=size&page=1",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search?q={query}&sort=size&page=1",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search?q={query}&sort=size&page=1",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('.results dl')",
+      "title": "row.querySelector('dt a').textContent",
+      "size": "row.querySelector('span:nth-child(3)').textContent",
+      "seeds": "row.querySelector('span:nth-child(4)').textContent",
+      "peers": "row.querySelector('span:nth-child(5)').textContent",
+      "url": "row.querySelector('dd span a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "kickass_primary": {
+    "name": "KickassTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/kickass",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/usearch/{query}/1/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/usearch/{query}/1/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/usearch/{query}/1/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/usearch/{query}/1/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table:nth-child(2) tbody tr:not(.firstr)')",
+      "title": "row.querySelector('.cellMainLink').textContent",
+      "size": "row.querySelector('.nobr').textContent",
+      "seeds": "row.querySelectorAll('td')[3].textContent",
+      "peers": "row.querySelectorAll('td')[4].textContent",
+      "url": "decodeURIComponent(row.querySelectorAll('a')[1].href.split('?url=')[1])"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "glotorrents_primary": {
+    "name": "GloTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/glotorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search_results.php?search={query}&cat=1&incldead=1&sort=size&order=desc&page=0",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search_results.php?search={query}&cat=41&incldead=1&sort=size&order=desc&page=0",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search_results.php?search={query}&cat=41&incldead=1&sort=size&order=desc&page=0",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search_results.php?search={query}&cat=28&incldead=1&sort=size&order=desc&page=0",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table.ttable_headinner tbody tr.t-row:nth-child(odd)')",
+      "title": "row.querySelector('td:nth-child(2) a:nth-child(2)').textContent",
+      "peers": "row.querySelector('td:nth-child(7)').textContent",
+      "seeds": "row.querySelector('td:nth-child(6)').textContent",
+      "size": "row.querySelector('td:nth-child(5)').textContent",
+      "url": "row.querySelector('td:nth-child(4) a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 45,
+    "host_status": "public server"
+  },
+  "torrentquest_primary": {
+    "name": "TorrentQuest",
+    "base_url": "https://magnify.pages.dev/scrapers/torrentquest",
+    "response_type": "text",
+    "separator": "-",
+    "movie": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/1/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/1/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/1/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/1/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table.download tbody tr:nth-child(odd)')",
+      "title": "row.querySelector('td:nth-child(2) a').getAttribute('title')",
+      "size": "row.querySelector('td:nth-child(6)').textContent",
+      "seeds": "row.querySelector('td:nth-child(7)').textContent",
+      "peers": "row.querySelector('td:nth-child(8)').textContent",
+      "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 40,
+    "host_status": "public server"
+  },
+  "1337x_primary": {
+    "name": "1337x",
+    "base_url": "https://magnify.pages.dev/scrapers/1337x",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/sort-category-search/{query}/Movies/size/desc/1/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/sort-category-search/{query}/TV/size/desc/1/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/sort-category-search/{query}/TV/size/desc/1/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/sort-category-search/{query}/Anime/size/desc/1/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody > tr')",
+      "title": "row.querySelector('a:nth-child(2)').innerHTML",
+      "size": "row.querySelector('tbody > tr .size').textContent.split('B')[0]+'B'",
+      "seeds": "row.querySelector('.seeds').innerHTML",
+      "peers": "row.querySelector('.leeches').innerHTML",
+      "url": "row.querySelector('a:nth-child(2)').getAttribute('href')"
+    },
+    "source_is_in_sub_page": true,
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 40,
+    "host_status": "public server"
+  },
+  "nyaa_primary": {
+    "name": "Nyaa",
+    "base_url": "https://magnify.pages.dev/scrapers/nyaa",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=1",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=1",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=1",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=1",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('.table-responsive tbody > tr')",
+      "title": "row.querySelector('td:nth-child(2) a').textContent",
+      "size": "row.querySelector('td:nth-child(4)').textContent",
+      "seeds": "row.querySelector('td:nth-child(6)').textContent",
+      "peers": "row.querySelector('td:nth-child(7)').textContent",
+      "url": "row.querySelector('td:nth-child(3) a:nth-child(2)').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max": 75,
+    "host_status": "public server"
+  },
+  "piratebay_secondary": {
+    "name": "PirateBay",
+    "base_url": "https://magnify.pages.dev/scrapers/piratebay",
+    "response_type": "json",
+    "separator": "+",
+    "movie": {
+      "query": "/q.php?q={query}&cat=207",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/q.php?q={query}&cat=208",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/q.php?q={query}&cat=208",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/q.php?q={query}&cat=208",
+      "keywords": "{title} {episode}"
+    },
+    "json_format": {
+      "title": "name",
+      "size": "size",
+      "seeds": "seeders",
+      "peers": "leechers",
+      "hash": "info_hash"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 100,
+    "host_status": "public server"
+  },
+  "torlock_secondary": {
+    "name": "Torlock",
+    "base_url": "https://magnify.pages.dev/scrapers/torlock",
+    "response_type": "text",
+    "separator": "-",
+    "movie": {
+      "query": "/movie/torrents/{query}/?sort=size&page=2",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/television/torrents/{query}/?sort=size&page=2",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/television/torrents/{query}/?sort=size&page=2",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/anime/torrents/{query}/?sort=size&page=2",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody tr')",
+      "title": "row.querySelector('td:nth-child(1) a b').textContent",
+      "size": "row.querySelector('.ts').textContent",
+      "seeds": "row.querySelector('.tul').textContent",
+      "peers": "row.querySelector('.tdl').textContent",
+      "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
+    },
+    "source_is_in_sub_page": true,
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 100,
+    "host_status": "public server"
+  },
+  "cloudtorrents_secondary": {
+    "name": "CloudTorrrents",
+    "base_url": "https://magnify.pages.dev/scrapers/cloudtorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search?query={query}&torrent_type=5&ordering=-size&offset=50",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search?query={query}&torrent_type=8&ordering=-size&offset=50",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search?query={query}&torrent_type=8&ordering=-size&offset=50",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search?query={query}&torrent_type=1&ordering=-size&offset=50",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody tr')",
+      "title": "row.querySelector('.torrent-name').textContent.trim()",
+      "size": "row.querySelector('td:nth-child(2)').textContent.trim()",
+      "seeds": "row.querySelector('td:nth-child(4)').textContent.trim()",
+      "peers": "row.querySelector('td:nth-child(5)').textContent.trim()",
+      "url": "row.querySelector('a[href^=\"magnet:\"]').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "solidtorrents_secondary": {
+    "name": "SolidTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/solidtorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search?q={query}&sort=size&page=2",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search?q={query}&sort=size&page=2",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search?q={query}&sort=size&page=2",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search?q={query}&sort=size&page=2",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('.results dl')",
+      "title": "row.querySelector('dt a').textContent",
+      "size": "row.querySelector('span:nth-child(3)').textContent",
+      "seeds": "row.querySelector('span:nth-child(4)').textContent",
+      "peers": "row.querySelector('span:nth-child(5)').textContent",
+      "url": "row.querySelector('dd span a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "kickass_secondary": {
+    "name": "KickassTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/kickass",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/usearch/{query}/2/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/usearch/{query}/2/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/usearch/{query}/2/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/usearch/{query}/2/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table:nth-child(2) tbody tr:not(.firstr)')",
+      "title": "row.querySelector('.cellMainLink').textContent",
+      "size": "row.querySelector('.nobr').textContent",
+      "seeds": "row.querySelectorAll('td')[3].textContent",
+      "peers": "row.querySelectorAll('td')[4].textContent",
+      "url": "decodeURIComponent(row.querySelectorAll('a')[1].href.split('?url=')[1])"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "glotorrents_secondary": {
+    "name": "GloTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/glotorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search_results.php?search={query}&cat=1&incldead=1&sort=size&order=desc&page=1",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search_results.php?search={query}&cat=41&incldead=1&sort=size&order=desc&page=1",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search_results.php?search={query}&cat=41&incldead=1&sort=size&order=desc&page=1",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search_results.php?search={query}&cat=28&incldead=1&sort=size&order=desc&page=1",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table.ttable_headinner tbody tr.t-row:nth-child(odd)')",
+      "title": "row.querySelector('td:nth-child(2) a:nth-child(2)').textContent",
+      "peers": "row.querySelector('td:nth-child(7)').textContent",
+      "seeds": "row.querySelector('td:nth-child(6)').textContent",
+      "size": "row.querySelector('td:nth-child(5)').textContent",
+      "url": "row.querySelector('td:nth-child(4) a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 45,
+    "host_status": "public server"
+  },
+  "torrentquest_secondary": {
+    "name": "TorrentQuest",
+    "base_url": "https://magnify.pages.dev/scrapers/torrentquest",
+    "response_type": "text",
+    "separator": "-",
+    "movie": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/2/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/2/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/2/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/2/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table.download tbody tr:nth-child(odd)')",
+      "title": "row.querySelector('td:nth-child(2) a').getAttribute('title')",
+      "size": "row.querySelector('td:nth-child(6)').textContent",
+      "seeds": "row.querySelector('td:nth-child(7)').textContent",
+      "peers": "row.querySelector('td:nth-child(8)').textContent",
+      "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 40,
+    "host_status": "public server"
+  },
+  "1337x_secondary": {
+    "name": "1337x",
+    "base_url": "https://magnify.pages.dev/scrapers/1337x",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/sort-category-search/{query}/Movies/size/desc/2/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/sort-category-search/{query}/TV/size/desc/2/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/sort-category-search/{query}/TV/size/desc/2/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/sort-category-search/{query}/Anime/size/desc/2/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody > tr')",
+      "title": "row.querySelector('a:nth-child(2)').innerHTML",
+      "size": "row.querySelector('tbody > tr .size').textContent.split('B')[0]+'B'",
+      "seeds": "row.querySelector('.seeds').innerHTML",
+      "peers": "row.querySelector('.leeches').innerHTML",
+      "url": "row.querySelector('a:nth-child(2)').getAttribute('href')"
+    },
+    "source_is_in_sub_page": true,
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 40,
+    "host_status": "public server"
+  },
+  "nyaa_secondary": {
+    "name": "Nyaa",
+    "base_url": "https://magnify.pages.dev/scrapers/nyaa",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=2",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=2",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=2",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=2",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('.table-responsive tbody > tr')",
+      "title": "row.querySelector('td:nth-child(2) a').textContent",
+      "size": "row.querySelector('td:nth-child(4)').textContent",
+      "seeds": "row.querySelector('td:nth-child(6)').textContent",
+      "peers": "row.querySelector('td:nth-child(7)').textContent",
+      "url": "row.querySelector('td:nth-child(3) a:nth-child(2)').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max": 75,
+    "host_status": "public server"
+  },
+  "piratebay_tertiary": {
+    "name": "PirateBay",
+    "base_url": "https://magnify.pages.dev/scrapers/piratebay",
+    "response_type": "json",
+    "separator": "+",
+    "movie": {
+      "query": "/q.php?q={query}&cat=201",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/q.php?q={query}&cat=205",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/q.php?q={query}&cat=205",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/q.php?q={query}&cat=205",
+      "keywords": "{title} {episode}"
+    },
+    "json_format": {
+      "title": "name",
+      "size": "size",
+      "seeds": "seeders",
+      "peers": "leechers",
+      "hash": "info_hash"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 100,
+    "host_status": "public server"
+  },
+  "torlock_tertiary": {
+    "name": "Torlock",
+    "base_url": "https://magnify.pages.dev/scrapers/torlock",
+    "response_type": "text",
+    "separator": "-",
+    "movie": {
+      "query": "/movie/torrents/{query}/?sort=size&page=3",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/television/torrents/{query}/?sort=size&page=3",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/television/torrents/{query}/?sort=size&page=3",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/anime/torrents/{query}/?sort=size&page=3",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody tr')",
+      "title": "row.querySelector('td:nth-child(1) a b').textContent",
+      "size": "row.querySelector('.ts').textContent",
+      "seeds": "row.querySelector('.tul').textContent",
+      "peers": "row.querySelector('.tdl').textContent",
+      "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
+    },
+    "source_is_in_sub_page": true,
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 100,
+    "host_status": "public server"
+  },
+  "cloudtorrents_tertiary": {
+    "name": "CloudTorrrents",
+    "base_url": "https://magnify.pages.dev/scrapers/cloudtorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search?query={query}&torrent_type=5&ordering=-size&offset=100",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search?query={query}&torrent_type=8&ordering=-size&offset=100",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search?query={query}&torrent_type=8&ordering=-size&offset=100",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search?query={query}&torrent_type=1&ordering=-size&offset=100",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody tr')",
+      "title": "row.querySelector('.torrent-name').textContent.trim()",
+      "size": "row.querySelector('td:nth-child(2)').textContent.trim()",
+      "seeds": "row.querySelector('td:nth-child(4)').textContent.trim()",
+      "peers": "row.querySelector('td:nth-child(5)').textContent.trim()",
+      "url": "row.querySelector('a[href^=\"magnet:\"]').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "solidtorrents_tertiary": {
+    "name": "SolidTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/solidtorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search?q={query}&sort=size&page=3",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search?q={query}&sort=size&page=3",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search?q={query}&sort=size&page=3",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search?q={query}&sort=size&page=3",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('.results dl')",
+      "title": "row.querySelector('dt a').textContent",
+      "size": "row.querySelector('span:nth-child(3)').textContent",
+      "seeds": "row.querySelector('span:nth-child(4)').textContent",
+      "peers": "row.querySelector('span:nth-child(5)').textContent",
+      "url": "row.querySelector('dd span a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "kickass_tertiary": {
+    "name": "KickassTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/kickass",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/usearch/{query}/3/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/usearch/{query}/3/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/usearch/{query}/3/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/usearch/{query}/3/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table:nth-child(2) tbody tr:not(.firstr)')",
+      "title": "row.querySelector('.cellMainLink').textContent",
+      "size": "row.querySelector('.nobr').textContent",
+      "seeds": "row.querySelectorAll('td')[3].textContent",
+      "peers": "row.querySelectorAll('td')[4].textContent",
+      "url": "decodeURIComponent(row.querySelectorAll('a')[1].href.split('?url=')[1])"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 50,
+    "host_status": "public server"
+  },
+  "glotorrents_tertiary": {
+    "name": "GloTorrents",
+    "base_url": "https://magnify.pages.dev/scrapers/glotorrents",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/search_results.php?search={query}&cat=1&incldead=1&sort=size&order=desc&page=2",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/search_results.php?search={query}&cat=41&incldead=1&sort=size&order=desc&page=2",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/search_results.php?search={query}&cat=41&incldead=1&sort=size&order=desc&page=2",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/search_results.php?search={query}&cat=28&incldead=1&sort=size&order=desc&page=2",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table.ttable_headinner tbody tr.t-row:nth-child(odd)')",
+      "title": "row.querySelector('td:nth-child(2) a:nth-child(2)').textContent",
+      "peers": "row.querySelector('td:nth-child(7)').textContent",
+      "seeds": "row.querySelector('td:nth-child(6)').textContent",
+      "size": "row.querySelector('td:nth-child(5)').textContent",
+      "url": "row.querySelector('td:nth-child(4) a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 45,
+    "host_status": "public server"
+  },
+  "torrentquest_tertiary": {
+    "name": "TorrentQuest",
+    "base_url": "https://magnify.pages.dev/scrapers/torrentquest",
+    "response_type": "text",
+    "separator": "-",
+    "movie": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/3/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/3/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/3/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/{titleFirstLetter}/{query}/size/desc/3/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('table.download tbody tr:nth-child(odd)')",
+      "title": "row.querySelector('td:nth-child(2) a').getAttribute('title')",
+      "size": "row.querySelector('td:nth-child(6)').textContent",
+      "seeds": "row.querySelector('td:nth-child(7)').textContent",
+      "peers": "row.querySelector('td:nth-child(8)').textContent",
+      "url": "row.querySelector('td:nth-child(1) a').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 40,
+    "host_status": "public server"
+  },
+  "1337x_tertiary": {
+    "name": "1337x",
+    "base_url": "https://magnify.pages.dev/scrapers/1337x",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/sort-category-search/{query}/Movies/size/desc/3/",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/sort-category-search/{query}/TV/size/desc/3/",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/sort-category-search/{query}/TV/size/desc/3/",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/sort-category-search/{query}/Anime/size/desc/3/",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('tbody > tr')",
+      "title": "row.querySelector('a:nth-child(2)').innerHTML",
+      "size": "row.querySelector('tbody > tr .size').textContent.split('B')[0]+'B'",
+      "seeds": "row.querySelector('.seeds').innerHTML",
+      "peers": "row.querySelector('.leeches').innerHTML",
+      "url": "row.querySelector('a:nth-child(2)').getAttribute('href')"
+    },
+    "source_is_in_sub_page": true,
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max_limit": 40,
+    "host_status": "public server"
+  },
+  "nyaa_tertiary": {
+    "name": "Nyaa",
+    "base_url": "https://magnify.pages.dev/scrapers/nyaa",
+    "response_type": "text",
+    "separator": "+",
+    "movie": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=3",
+      "keywords": [
+        "{title} {year}",
+        "{title}"
+      ]
+    },
+    "episode": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=3",
+      "keywords": "{title} {episodeCode}"
+    },
+    "season": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=3",
+      "keywords": [
+        "{title} {seasonCode}",
+        "{title} season"
+      ]
+    },
+    "anime": {
+      "query": "/?f=0&c=1_0&q={query}&s=size&o=desc&p=3",
+      "keywords": "{title} {episode}"
+    },
+    "html_parser": {
+      "row": "doc.querySelectorAll('.table-responsive tbody > tr')",
+      "title": "row.querySelector('td:nth-child(2) a').textContent",
+      "size": "row.querySelector('td:nth-child(4)').textContent",
+      "seeds": "row.querySelector('td:nth-child(6)').textContent",
+      "peers": "row.querySelector('td:nth-child(7)').textContent",
+      "url": "row.querySelector('td:nth-child(3) a:nth-child(2)').getAttribute('href')"
+    },
+    "time_to_wait_between_each_request_ms": 300,
+    "time_to_wait_on_too_many_request_ms": 5000,
+    "timeout_ms": 8000,
+    "max": 75,
+    "host_status": "public server"
+  }
+}
